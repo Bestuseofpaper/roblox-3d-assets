@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roblox 3D assets</title>
+  <meta name="description" content="Self-directed Roblox props, buildings, and environment assets.">
+  <style>
+    :root {
+      --paper: #f5f3ed;
+      --ink: #20231f;
+      --muted: #666a64;
+      --line: #c9cbc4;
+      --accent: #315b4b;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    img { display: block; width: 100%; height: auto; }
+    a { color: inherit; text-underline-offset: 4px; }
+    .wrap { width: min(calc(100% - 48px), var(--max)); margin: 0 auto; }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 22px 0;
+    }
+    header .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 24px;
+    }
+    .identity {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    nav { display: flex; gap: 24px; font-size: 14px; }
+    nav a { text-decoration: none; }
+    nav a:hover, nav a:focus-visible { text-decoration: underline; }
+
+    .intro {
+      padding: 82px 0 70px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(220px, .6fr);
+      gap: 56px;
+      align-items: end;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      margin-bottom: 18px;
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: .98;
+      letter-spacing: -0.055em;
+      font-weight: 700;
+    }
+    .intro-copy {
+      margin: 0;
+      max-width: 620px;
+      font-size: clamp(18px, 2.2vw, 24px);
+      line-height: 1.38;
+    }
+    .intro-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      border-left: 3px solid var(--accent);
+      padding-left: 16px;
+    }
+
+    .project {
+      border-top: 1px solid var(--line);
+      padding: 60px 0 76px;
+    }
+    .project-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, .85fr);
+      gap: 52px;
+      margin-bottom: 28px;
+      align-items: start;
+    }
+    .project h2 {
+      margin-bottom: 8px;
+      font-size: clamp(29px, 4vw, 46px);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+    .status {
+      margin: 0;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+    .description { margin-bottom: 18px; max-width: 590px; }
+    .facts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .facts li { white-space: nowrap; }
+    .media {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(260px, .85fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+    .media figure { margin: 0; min-width: 0; }
+    .media img {
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      object-position: center;
+      border: 1px solid var(--line);
+      background: #d9e4e8;
+    }
+    .market .media figure:first-child img { object-position: center 48%; }
+    figcaption {
+      padding-top: 9px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .offer {
+      border-top: 1px solid var(--line);
+      padding: 68px 0;
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 60px;
+    }
+    .offer h2, .contact h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+    .offer-copy { max-width: 700px; }
+    .offer-copy p:last-child { margin-bottom: 0; color: var(--muted); }
+    .contact {
+      padding: 68px 0 84px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 60px;
+    }
+    .contact-copy { max-width: 700px; }
+    .contact-copy p:last-child { margin-bottom: 0; color: var(--muted); }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 24px 0 36px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 760px) {
+      .wrap { width: auto; max-width: none; margin-left: 15px; margin-right: 15px; }
+      body { overflow-x: hidden; }
+      .intro > *, .project-head > *, .offer > *, .contact > * { min-width: 0; width: 100%; }
+      .intro-copy, .intro-note, .description, .offer-copy, .contact-copy { max-width: 100%; overflow-wrap: anywhere; }
+      header { padding: 18px 0; }
+      header .wrap { display: block; }
+      nav { margin-top: 12px; gap: 18px; }
+      .intro { grid-template-columns: 1fr; gap: 28px; padding: 56px 0 48px; }
+      h1 { font-size: clamp(42px, 14vw, 62px); }
+      .project { padding: 42px 0 54px; }
+      .project-head, .offer, .contact { grid-template-columns: 1fr; gap: 24px; }
+      .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 7px 14px; }
+      .facts li { white-space: normal; }
+      .media { grid-template-columns: 1fr; }
+      .media img { min-height: 0; aspect-ratio: 16 / 10; }
+      .offer, .contact { padding: 50px 0; }
+    }
+
+    @media (max-width: 430px) {
+      .facts { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header id="top">
+    <div class="wrap">
+      <p class="identity">Roblox 3D assets</p>
+      <nav aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap intro" aria-labelledby="page-title">
+      <div>
+        <h1 id="page-title">Roblox 3D assets</h1>
+        <p class="intro-copy">Props, small buildings, and environment pieces for Roblox experiences.</p>
+      </div>
+      <p class="intro-note">Self-directed portfolio work. In-game screenshots are shown where testing is complete.</p>
+    </section>
+
+    <div id="work">
+      <section class="project market" aria-labelledby="market-title">
+        <div class="wrap">
+          <div class="project-head">
+            <div>
+              <h2 id="market-title">Medieval market stall</h2>
+              <p class="status">Self-directed project · Roblox Studio tested</p>
+            </div>
+            <div>
+              <p class="description">Stylized market stall with two colour variants. Revised after an in-game scale test; the final version supports rear entry and use behind the counter.</p>
+              <ul class="facts" aria-label="Market stall technical details">
+                <li>8.0 × 5.95 × 8.44 studs</li>
+                <li>5,044 triangles</li>
+                <li>512 × 512 texture atlas</li>
+                <li>GLB + Blender source</li>
+              </ul>
+            </div>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="market-stall-studio.png" alt="Roblox avatar standing behind a red-roofed medieval market stall in Roblox Studio">
+              <figcaption>Final scale test in Roblox Studio.</figcaption>
+            </figure>
+            <figure>
+              <img src="market-stall-clearance.png" alt="Roblox avatar standing inside the rear of the market stall">
+              <figcaption>Rear access and player clearance check.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="project" aria-labelledby="camp-title">
+        <div class="wrap">
+          <div class="project-head">
+            <div>
+              <h2 id="camp-title">Forest campsite kit</h2>
+              <p class="status">Self-directed project · Studio scale tested</p>
+            </div>
+            <div>
+              <p class="description">Four matching assets: tent, campfire, bench, and supply crate. The second version was resized using a Roblox avatar comparison.</p>
+              <ul class="facts" aria-label="Campsite kit technical details">
+                <li>4 assets + combined scene</li>
+                <li>7,564 triangles total</li>
+                <li>512 × 512 shared texture atlas</li>
+                <li>5 GLB exports</li>
+              </ul>
+            </div>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="campsite-studio.png" alt="Forest campsite assets shown beside a Roblox avatar in Roblox Studio">
+              <figcaption>Full kit at revised player scale in Roblox Studio.</figcaption>
+            </figure>
+            <figure>
+              <img src="campsite-bench-studio.png" alt="Roblox avatar standing beside the campsite bench and campfire">
+              <figcaption>Bench and campfire scale check.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="project" aria-labelledby="bakery-title">
+        <div class="wrap">
+          <div class="project-head">
+            <div>
+              <h2 id="bakery-title">Bakery display counter</h2>
+              <p class="status">Self-directed project · Blender preview · Studio import pending</p>
+            </div>
+            <div>
+              <p class="description">Stocked and empty display-counter variants with a glass case, customer-facing panels, and staff-side storage.</p>
+              <ul class="facts" aria-label="Bakery counter technical details">
+                <li>7.2 × 3.2 × 4.25 studs</li>
+                <li>7,392 triangles stocked</li>
+                <li>512 × 512 texture atlas</li>
+                <li>GLB + Blender source</li>
+              </ul>
+            </div>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="bakery-counter-front.png" alt="Blender preview of a wooden bakery display counter with bread and pastries behind glass">
+              <figcaption>Customer-side Blender preview.</figcaption>
+            </figure>
+            <figure>
+              <img src="bakery-counter-staff.png" alt="Blender preview showing the staff side and storage of the bakery counter">
+              <figcaption>Staff-side storage and work area.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="about" class="wrap offer" aria-labelledby="offer-title">
+      <h2 id="offer-title">What I offer</h2>
+      <div class="offer-copy">
+        <p>Stylized Roblox props, shop fixtures, simple buildings, and small environment sets. Available deliverables include GLB files, Blender source, texture files, and a Roblox Studio setup checklist when agreed.</p>
+        <p>Each project starts with target dimensions, style references, triangle and texture limits, collision expectations, file format, deadline, and revision scope.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="wrap contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="contact-copy">
+        <p>Message me through the platform where this portfolio was shared.</p>
+        <p>Include reference images, target size in studs, required format, deadline, and budget.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Self-directed portfolio. No paid client work is represented.</div>
+  </footer>
+</body>
+</html>
