@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Roblox 3D assets</title>
+  <title>Roblox 3D assets — Bestuseofpaper</title>
   <meta name="description" content="Self-directed Roblox props, buildings, and environment assets.">
   <style>
     :root {
@@ -45,7 +45,7 @@
       font-weight: 700;
       letter-spacing: -0.01em;
     }
-    nav { display: flex; gap: 24px; font-size: 14px; }
+    nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 14px; }
     nav a { text-decoration: none; }
     nav a:hover, nav a:focus-visible { text-decoration: underline; }
 
@@ -132,6 +132,9 @@
       background: #d9e4e8;
     }
     .market .media figure:first-child img { object-position: center 48%; }
+    .studio-proof { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 22px; }
+    .studio-proof figure { margin: 0; }
+    .studio-proof img { width: auto; max-width: 100%; border: 1px solid var(--line); }
     figcaption {
       padding-top: 9px;
       color: var(--muted);
@@ -195,9 +198,10 @@
 <body>
   <header id="top">
     <div class="wrap">
-      <p class="identity">Roblox 3D assets</p>
+      <p class="identity">Bestuseofpaper</p>
       <nav aria-label="Primary navigation">
-        <a href="#work">Work</a>
+        <a href="#work" aria-current="page">Roblox assets</a>
+        <a href="general-3d.html">General 3D</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -233,11 +237,11 @@
           </div>
           <div class="media">
             <figure>
-              <img src="market-stall-studio.png" alt="Roblox avatar standing behind a red-roofed medieval market stall in Roblox Studio">
+              <img src="assets/market-stall-studio.png" alt="Roblox avatar standing behind a red-roofed medieval market stall in Roblox Studio">
               <figcaption>Final scale test in Roblox Studio.</figcaption>
             </figure>
             <figure>
-              <img src="market-stall-clearance.png" alt="Roblox avatar standing inside the rear of the market stall">
+              <img src="assets/market-stall-clearance.png" alt="Roblox avatar standing inside the rear of the market stall">
               <figcaption>Rear access and player clearance check.</figcaption>
             </figure>
           </div>
@@ -263,11 +267,11 @@
           </div>
           <div class="media">
             <figure>
-              <img src="campsite-studio.png" alt="Forest campsite assets shown beside a Roblox avatar in Roblox Studio">
+              <img src="assets/campsite-studio.png" alt="Forest campsite assets shown beside a Roblox avatar in Roblox Studio">
               <figcaption>Full kit at revised player scale in Roblox Studio.</figcaption>
             </figure>
             <figure>
-              <img src="campsite-bench-studio.png" alt="Roblox avatar standing beside the campsite bench and campfire">
+              <img src="assets/campsite-bench-studio.png" alt="Roblox avatar standing beside the campsite bench and campfire">
               <figcaption>Bench and campfire scale check.</figcaption>
             </figure>
           </div>
@@ -293,12 +297,82 @@
           </div>
           <div class="media">
             <figure>
-              <img src="bakery-counter-front.png" alt="Blender preview of a wooden bakery display counter with bread and pastries behind glass">
+              <img src="assets/bakery-counter-front.png" alt="Blender preview of a wooden bakery display counter with bread and pastries behind glass">
               <figcaption>Customer-side Blender preview.</figcaption>
             </figure>
             <figure>
-              <img src="bakery-counter-staff.png" alt="Blender preview showing the staff side and storage of the bakery counter">
+              <img src="assets/bakery-counter-staff.png" alt="Blender preview showing the staff side and storage of the bakery counter">
               <figcaption>Staff-side storage and work area.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="project" aria-labelledby="tools-title">
+        <div class="wrap">
+          <div class="project-head">
+            <div>
+              <h2 id="tools-title">Tycoon tool props</h2>
+              <p class="status">Self-directed project · Roblox Studio appearance checked</p>
+            </div>
+            <div>
+              <p class="description">Two original static props—an axe and a pickaxe—made to test readable silhouettes and small-item modeling for a tycoon-style game. No scripted Tool behaviour is included.</p>
+              <ul class="facts" aria-label="Tool prop technical details">
+                <li>Axe: 880 triangles</li>
+                <li>Pickaxe: 788 triangles</li>
+                <li>Individual GLBs + Blender source</li>
+                <li>V2 colours confirmed in Studio</li>
+              </ul>
+            </div>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="assets/tycoon-axe-preview.png" alt="Blender preview of a stylized steel axe with a wooden handle and wrapped grip">
+              <figcaption>Axe Blender preview.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/tycoon-pickaxe-preview.png" alt="Blender preview of a stylized double-point pickaxe with a wooden handle and wrapped grip">
+              <figcaption>Pickaxe Blender preview.</figcaption>
+            </figure>
+          </div>
+          <div class="studio-proof" aria-label="Roblox Studio import evidence">
+            <figure>
+              <img src="assets/tycoon-axe-studio.png" alt="Textured axe imported in Roblox Studio beside a player avatar">
+              <figcaption>Axe beside a player avatar in Studio.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/tycoon-pickaxe-studio.png" alt="Textured pickaxe imported in Roblox Studio">
+              <figcaption>Pickaxe colour check in Studio.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="project" aria-labelledby="bus-title">
+        <div class="wrap">
+          <div class="project-head">
+            <div>
+              <h2 id="bus-title">NORDLINE city bus concept</h2>
+              <p class="status">Self-directed work in progress · Blender preview · Studio test pending</p>
+            </div>
+            <div>
+              <p class="description">Fictional city-bus study with a passenger cabin, seating, handrails, separate door leaves, and an original transit identity. Not based on a real bus model.</p>
+              <ul class="facts" aria-label="City bus concept technical details">
+                <li>40 × 8.5 × 10.5 stud design target</li>
+                <li>15,505 triangles in closed export</li>
+                <li>GLB + Blender source</li>
+                <li>Roblox Studio import unverified</li>
+              </ul>
+            </div>
+          </div>
+          <div class="media">
+            <figure>
+              <img src="assets/nordline-bus-exterior.png" alt="Blender preview of a teal and white fictional city bus seen from the passenger side">
+              <figcaption>Exterior Blender preview; block figure shown for scale.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/nordline-bus-interior.png" alt="Blender preview looking down the bus aisle between blue seats and yellow handrails">
+              <figcaption>Passenger-cabin Blender preview.</figcaption>
             </figure>
           </div>
         </div>

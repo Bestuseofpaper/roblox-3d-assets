@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>General 3D models — Bestuseofpaper</title>
+  <meta name="description" content="Self-directed stylized 3D props and small environment model studies by Bestuseofpaper.">
+  <style>
+    :root { --paper:#f5f3ed; --ink:#20231f; --muted:#666a64; --line:#c9cbc4; --accent:#315b4b; --max:1180px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.55 Arial,Helvetica,sans-serif; }
+    img { display:block; width:100%; height:auto; }
+    a { color:inherit; text-underline-offset:4px; }
+    .wrap { width:min(calc(100% - 48px),var(--max)); margin:0 auto; }
+    header { border-bottom:1px solid var(--line); padding:22px 0; }
+    header .wrap { display:flex; justify-content:space-between; align-items:baseline; gap:24px; }
+    .identity { margin:0; font-size:18px; font-weight:700; letter-spacing:-.01em; }
+    nav { display:flex; flex-wrap:wrap; gap:18px 24px; font-size:14px; }
+    nav a { text-decoration:none; }
+    nav a:hover, nav a:focus-visible, nav a[aria-current] { text-decoration:underline; }
+    h1,h2,p { margin-top:0; }
+    .intro { padding:80px 0 68px; display:grid; grid-template-columns:minmax(0,1.5fr) minmax(220px,.6fr); gap:56px; align-items:end; }
+    h1 { margin-bottom:18px; font-size:clamp(42px,7vw,82px); line-height:.98; letter-spacing:-.055em; }
+    .intro-copy { margin:0; max-width:650px; font-size:clamp(18px,2.2vw,24px); line-height:1.38; }
+    .intro-note { margin:0; color:var(--muted); font-size:14px; border-left:3px solid var(--accent); padding-left:16px; }
+    .project { border-top:1px solid var(--line); padding:60px 0 76px; }
+    .project-head { display:grid; grid-template-columns:minmax(0,1fr) minmax(260px,.85fr); gap:52px; align-items:start; margin-bottom:28px; }
+    .project h2 { margin-bottom:8px; font-size:clamp(29px,4vw,46px); line-height:1.05; letter-spacing:-.035em; }
+    .status { margin:0; color:var(--accent); font-size:13px; font-weight:700; letter-spacing:.03em; text-transform:uppercase; }
+    .description { max-width:590px; margin-bottom:0; }
+    .media { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(260px,.85fr); gap:14px; }
+    .media figure { min-width:0; margin:0; }
+    .media img { aspect-ratio:4/3; object-fit:contain; border:1px solid var(--line); background:#313231; }
+    figcaption { padding-top:9px; color:var(--muted); font-size:12px; }
+    .offer,.contact { display:grid; grid-template-columns:.7fr 1.3fr; gap:60px; border-top:1px solid var(--line); padding:68px 0; }
+    .offer h2,.contact h2 { font-size:clamp(28px,4vw,42px); line-height:1.1; letter-spacing:-.03em; }
+    .copy { max-width:700px; }
+    .copy p:last-child { margin-bottom:0; color:var(--muted); }
+    .contact-link { color:var(--accent); font-weight:700; }
+    footer { border-top:1px solid var(--line); padding:24px 0 36px; color:var(--muted); font-size:12px; }
+    @media (max-width:760px) {
+      .wrap { width:auto; margin:0 15px; }
+      header { padding:18px 0; }
+      header .wrap { display:block; }
+      nav { margin-top:12px; }
+      .intro,.project-head,.offer,.contact { grid-template-columns:1fr; gap:24px; }
+      .intro { padding:56px 0 48px; }
+      .project { padding:42px 0 54px; }
+      .media { grid-template-columns:1fr; }
+      .media img { min-height:0; }
+      .offer,.contact { padding:50px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="identity">Bestuseofpaper</p>
+      <nav aria-label="Primary navigation">
+        <a href="index.html#work">Roblox assets</a>
+        <a href="#work" aria-current="page">General 3D</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="wrap intro" aria-labelledby="page-title">
+      <div>
+        <h1 id="page-title">3D model studies</h1>
+        <p class="intro-copy">Stylized props, fixtures, and small environment pieces shown as Blender previews.</p>
+      </div>
+      <p class="intro-note">Self-directed work. These models began as Roblox asset studies; setup for other game engines would be scoped and checked for each project.</p>
+    </section>
+
+    <div id="work">
+      <section class="project" aria-labelledby="market-title">
+        <div class="wrap">
+          <div class="project-head">
+            <div><h2 id="market-title">Market stall</h2><p class="status">Self-directed · Blender preview</p></div>
+            <p class="description">Open-sided wooden stall with a striped canopy, service counter, shelves, and rear access.</p>
+          </div>
+          <div class="media">
+            <figure><img src="assets/market-stall-render.png" alt="Three-quarter Blender render of a red-canopied wooden market stall"><figcaption>Front and side.</figcaption></figure>
+            <figure><img src="assets/market-stall-rear-render.png" alt="Blender render showing the open rear of the market stall"><figcaption>Open rear and counter.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="project" aria-labelledby="camp-title">
+        <div class="wrap">
+          <div class="project-head">
+            <div><h2 id="camp-title">Campsite props</h2><p class="status">Self-directed · Blender preview</p></div>
+            <p class="description">Matching tent, campfire, bench, and supply crate modeled as a small environment set.</p>
+          </div>
+          <div class="media">
+            <figure><img src="assets/campsite-render.png" alt="Blender render of a tent, campfire, bench, and crate"><figcaption>Four-piece environment set.</figcaption></figure>
+            <figure><img src="assets/campsite-rear-render.png" alt="Blender render of the campsite set from behind the tent"><figcaption>Set from the opposite side.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="project" aria-labelledby="bakery-title">
+        <div class="wrap">
+          <div class="project-head">
+            <div><h2 id="bakery-title">Bakery display counter</h2><p class="status">Self-directed · Blender preview</p></div>
+            <p class="description">Glass-front counter with stocked shelves and staff-side storage. Its appearance in a game engine remains to be checked.</p>
+          </div>
+          <div class="media">
+            <figure><img src="assets/bakery-counter-staff.png" alt="Blender render showing the stocked shelves and storage side of a bakery counter"><figcaption>Staff side.</figcaption></figure>
+            <figure><img src="assets/bakery-counter-front.png" alt="Blender render showing the customer-facing glass and wood panels of a bakery counter"><figcaption>Customer side.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="project" aria-labelledby="tools-title">
+        <div class="wrap">
+          <div class="project-head">
+            <div><h2 id="tools-title">Axe and pickaxe</h2><p class="status">Self-directed · Static models</p></div>
+            <p class="description">A small pair of stylized hand-tool models with wood handles and metal heads. No animation or gameplay behavior is included.</p>
+          </div>
+          <div class="media tools">
+            <figure><img src="assets/tycoon-axe-preview.png" alt="Blender preview of a stylized axe"><figcaption>Axe Blender preview.</figcaption></figure>
+            <figure><img src="assets/tycoon-pickaxe-preview.png" alt="Blender preview of a stylized pickaxe"><figcaption>Pickaxe Blender preview.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="wrap offer" aria-labelledby="offer-title">
+      <h2 id="offer-title">What I offer</h2>
+      <div class="copy">
+        <p>Small static 3D props, fixtures, and environment pieces. We can agree on style references, dimensions, target platform, file format, textures, price, timing, and revisions before work begins.</p>
+        <p>For Roblox Studio examples, see the <a href="index.html#work">Roblox assets portfolio</a>.</p>
+      </div>
+    </section>
+    <section id="contact" class="wrap contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="copy">
+        <p><a class="contact-link" href="https://itch.io/t/7214775/for-hire-paid-stylized-static-3d-props-for-roblox-games">Contact me through my itch.io for-hire post</a>.</p>
+        <p>Send a reference or description, intended size, target engine, preferred file format, and budget.</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">Self-directed portfolio. No paid client work or other-engine integration is represented.</div></footer>
+</body>
+</html>
