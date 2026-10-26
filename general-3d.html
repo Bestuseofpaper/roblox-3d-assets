@@ -30,6 +30,7 @@
     .status { margin:0; color:var(--accent); font-size:13px; font-weight:700; letter-spacing:.03em; text-transform:uppercase; }
     .description { max-width:590px; margin-bottom:0; }
     .media { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(260px,.85fr); gap:14px; }
+    .media.single { display:block; max-width:900px; }
     .media figure { min-width:0; margin:0; }
     .media img { aspect-ratio:4/3; object-fit:contain; border:1px solid var(--line); background:#313231; }
     figcaption { padding-top:9px; color:var(--muted); font-size:12px; }
@@ -44,7 +45,7 @@
       header { padding:18px 0; }
       header .wrap { display:block; }
       nav { margin-top:12px; }
-      .intro,.project-head,.offer,.contact { grid-template-columns:1fr; gap:24px; }
+      .intro,.project-head,.offer,.contact { grid-template-columns:minmax(0,1fr); gap:24px; }
       .intro { padding:56px 0 48px; }
       .project { padding:42px 0 54px; }
       .media { grid-template-columns:1fr; }
@@ -74,6 +75,18 @@
     </section>
 
     <div id="work">
+      <section class="project" aria-labelledby="tideline-title">
+        <div class="wrap">
+          <div class="project-head">
+            <div><h2 id="tideline-title">Tideline vending machine</h2><p class="status">Self-directed · Blender preview</p></div>
+            <p class="description">Static stylized drink machine with a recessed display of cans and bottles, a keypad, and a pickup area. The latest version has not been checked in Roblox Studio.</p>
+          </div>
+          <div class="media single">
+            <figure><img src="assets/tideline-vending-machine.png" alt="Three-quarter Blender render of a blue Tideline drink vending machine with cans and bottles behind the display window"><figcaption>Blender render of the front and side.</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
       <section class="project" aria-labelledby="market-title">
         <div class="wrap">
           <div class="project-head">
